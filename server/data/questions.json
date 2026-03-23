@@ -1,0 +1,53 @@
+{
+  "round1": [
+    {"q":"print(3 * '7')","options":["21","777","Error","'777'"],"answer":1},
+    {"q":"print(bool([]), bool([0]))","options":["False False","False True","True False","True True"],"answer":1},
+    {"q":"print(5//2, 5/2)","options":["2 2.5","2.5 2","2 2","Error"],"answer":0},
+    {"q":"print([i*i for i in range(3)])","options":["[1,4,9]","[0,1,4]","[0,1,4,9]","Error"],"answer":1},
+    {"q":"print(len(set([1,1,2,3])))","options":["4","3","2","Error"],"answer":1},
+    {"q":"print(0.1 + 0.2 == 0.3)","options":["True","False","Error","Depends"],"answer":1},
+    {"q":"a=[1,2,3];b=a;b.append(4);print(a)","options":["[1,2,3]","[1,2,3,4]","Error","None"],"answer":1},
+    {"q":"print(type({}))","options":["list","dict","set","tuple"],"answer":1},
+    {"q":"print('10'*2)","options":["20","1010","Error","'1010'"],"answer":1},
+    {"q":"x=(1,2,3);x[0]=10","options":["(10,2,3)","Error","(1,2,3)","None"],"answer":1}
+  ],
+
+  "round2": [
+    {"title":"ATM Withdrawal System","description":"Initialize balance. Input withdrawal amount. If amount > balance print Insufficient Balance else deduct and print updated balance.","test_cases":[{"input":"1000\n200\n","output":"800"},{"input":"500\n600\n","output":"Insufficient Balance"}]},
+    {"title":"College Attendance Checker","description":"Input attendance percentage. If attendance < 75 print Not Eligible for Exam else print Eligible.","test_cases":[{"input":"60\n","output":"Not Eligible for Exam"},{"input":"80\n","output":"Eligible"}]},
+    {"title":"E-commerce Discount Calculator","description":"Input cart value. >5000 → 20% discount. >2000 → 10%. Else none. Print final payable.","test_cases":[{"input":"6000\n","output":"4800.0"},{"input":"3000\n","output":"2700.0"}]},
+    {"title":"Student Grade System","description":"Input marks. ≥90 A, ≥75 B, ≥50 C else Fail.","test_cases":[{"input":"95\n","output":"A"},{"input":"40\n","output":"Fail"}]},
+    {"title":"Traffic Signal Simulation","description":"Input signal color. red Stop, yellow Get Ready, green Go.","test_cases":[{"input":"red\n","output":"Stop"},{"input":"green\n","output":"Go"}]},
+    {"title":"Voting Eligibility Checker","description":"Input age. ≥18 Eligible else Not Eligible.","test_cases":[{"input":"20\n","output":"Eligible to Vote"},{"input":"15\n","output":"Not Eligible"}]},
+    {"title":"Bank PIN Verification","description":"Store correct PIN. Max 3 attempts. Match → Access Granted else Card Blocked.","test_cases":[{"input":"1234\n","output":"Access Granted"}]},
+    {"title":"Password Strength Checker","description":"Length ≥8, uppercase, lowercase, digit → Strong else Weak.","test_cases":[{"input":"Abc12345\n","output":"Strong Password"},{"input":"abc\n","output":"Weak Password"}]},
+    {"title":"Shopping Bill with GST","description":"Input total. Add 18% GST and print final.","test_cases":[{"input":"1000\n","output":"1180.0"}]},
+    {"title":"Electricity Bill Calculator","description":"First 100 units ₹5, next 100 ₹7, above ₹10.","test_cases":[{"input":"150\n","output":"850"},{"input":"250\n","output":"1550"}]}
+  ],
+
+  "round3": [
+    {"buggy_code":"i=0\nwhile i<5:\n print(i)","expected_output":"0\n1\n2\n3\n4"},
+    {"buggy_code":"a=5\nb=10\na=b\nb=a\nprint(a,b)","expected_output":"10 5"},
+    {"buggy_code":"a=[1,2,3]\nprint(a[3])","expected_output":"3"},
+    {"buggy_code":"print(\"Age: \"+25)","expected_output":"Age: 25"},
+    {"buggy_code":"for i in range(3):\nprint(i)","expected_output":"0\n1\n2"},
+    {"buggy_code":"def add(a,b):\n c=a+b\nprint(add(2,3))","expected_output":"5"},
+    {"buggy_code":"n=7\nfor i in range(2,n):\n if n%i==0:\n  print('Not Prime')\nprint('Prime')","expected_output":"Prime"},
+    {"buggy_code":"i=5\nwhile i<5:\n print(i)","expected_output":"5"},
+    {"buggy_code":"def f():\n return f()\nprint('Done')","expected_output":"Done"},
+    {"buggy_code":"def fact(n):\n if n==0:\n  return 1\n return n*fact(n-1)\nprint(fact(5))","expected_output":"120"}
+  ],
+
+  "round4": [
+    {"title":"Reverse List","test_cases":[{"input":"1 2 3\n","output":"3 2 1"}]},
+    {"title":"Palindrome Number","test_cases":[{"input":"121\n","output":"Palindrome"},{"input":"123\n","output":"Not Palindrome"}]},
+    {"title":"Second Largest Number","test_cases":[{"input":"1 5 3\n","output":"3"}]},
+    {"title":"Move Zeros to End","test_cases":[{"input":"0 1 0 3\n","output":"1 3 0 0"}]},
+    {"title":"Prime Check","test_cases":[{"input":"7\n","output":"Prime"},{"input":"8\n","output":"Not Prime"}]},
+    {"title":"Rotate List by K","test_cases":[{"input":"1 2 3 4\n2\n","output":"3 4 1 2"}]},
+    {"title":"Merge Sorted Lists","test_cases":[{"input":"1 3\n2 4\n","output":"1 2 3 4"}]},
+    {"title":"Digit Frequency","test_cases":[{"input":"1123\n","output":"1:2 2:1 3:1"}]},
+    {"title":"Remove Duplicates","test_cases":[{"input":"1 2 2 3\n","output":"1 2 3"}]},
+    {"title":"First Non-Repeating Character","test_cases":[{"input":"aabbc\n","output":"c"}]}
+  ]
+}
